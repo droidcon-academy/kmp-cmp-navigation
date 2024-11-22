@@ -1,2 +1,2 @@
 # Study materials and source code for **Droidcon Academy** course 
-> # Add Course Name 
+> # Mastering Navigation in KMP with Compose Multiplatform (CMP): A Comprehensive Guide for Android and iOS  
