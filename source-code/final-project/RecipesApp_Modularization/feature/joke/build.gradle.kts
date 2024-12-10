@@ -37,7 +37,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.stevdza_san.joke"
+    namespace = "com.droidcon.joke"
     compileSdk = 34
     defaultConfig {
         minSdk = 24

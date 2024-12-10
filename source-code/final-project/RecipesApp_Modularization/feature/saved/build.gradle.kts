@@ -42,7 +42,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.stevdza_san.saved"
+    namespace = "com.droidcon.saved"
     compileSdk = 34
     defaultConfig {
         minSdk = 24

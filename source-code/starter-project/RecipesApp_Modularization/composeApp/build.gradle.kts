@@ -52,11 +52,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.stevdza_san.recipes"
+    namespace = "com.droidcon.recipes"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.stevdza_san.recipes"
+        applicationId = "com.droidcon.recipes"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1

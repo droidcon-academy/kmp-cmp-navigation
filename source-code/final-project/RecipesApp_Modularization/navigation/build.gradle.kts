@@ -48,7 +48,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.stevdza_san.navigation"
+    namespace = "com.droidcon.navigation"
     compileSdk = 34
     defaultConfig {
         minSdk = 24
