@@ -13,14 +13,14 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "home"
+            baseName = "root"
             isStatic = true
         }
     }
@@ -33,19 +33,22 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
 
-            implementation(libs.koin.core)
-            implementation(libs.koin.compose)
-            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.compose.navigation)
+
             implementation(project(path = ":shared"))
+            implementation(project(path = ":feature:root:joke"))
+            implementation(project(path = ":feature:root:home"))
+            implementation(project(path = ":feature:root:details"))
+            implementation(project(path = ":feature:root:saved"))
         }
     }
 }
 
 android {
-    namespace = "com.droidcon.home"
-    compileSdk = 34
+    namespace = "com.droidcon.root"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
-        minSdk = 24
+        minSdk = libs.versions.android.minSdk.get().toInt()
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

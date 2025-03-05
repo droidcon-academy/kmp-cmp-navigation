@@ -1,11 +1,11 @@
-package com.droidcon.recipes.domain
+package com.droidcon.root.domain
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.droidcon.navigation.Screen
+import com.droidcon.shared.navigation.Screen
 
 sealed class BottomBarDestination(
     val screen: Screen,

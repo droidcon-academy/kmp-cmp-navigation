@@ -1,4 +1,4 @@
-package com.droidcon.navigation
+package com.droidcon.shared.navigation
 
 import kotlinx.serialization.Serializable
 

@@ -1,4 +1,4 @@
-package com.droidcon.navigation
+package com.droidcon.root.navigation
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -13,6 +13,7 @@ import com.droidcon.details.DetailsScreen
 import com.droidcon.home.HomeScreen
 import com.droidcon.joke.JokeScreen
 import com.droidcon.saved.SavedScreen
+import com.droidcon.shared.navigation.Screen
 
 @Composable
 fun BottomBarNavigationGraph(

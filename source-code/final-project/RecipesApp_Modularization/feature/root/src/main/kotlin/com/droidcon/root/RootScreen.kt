@@ -1,4 +1,4 @@
-package com.droidcon.recipes.presentation.screen.root
+package com.droidcon.root
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateDpAsState
@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material3.DrawerState
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -19,6 +19,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -29,18 +30,18 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.droidcon.navigation.BottomBarNavigationGraph
-import com.droidcon.recipes.domain.bottomBarDestinations
-import com.droidcon.recipes.presentation.component.CustomNavigationDrawer
+import com.droidcon.root.component.CustomNavigationDrawer
+import com.droidcon.root.domain.bottomBarDestinations
+import com.droidcon.root.navigation.BottomBarNavigationGraph
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RootScreen(
-    drawerState: DrawerState,
     navigateToSettings: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
     val navController = rememberNavController()
     val backstackEntry by navController.currentBackStackEntryAsState()
     val currentDestinationRoute by remember {

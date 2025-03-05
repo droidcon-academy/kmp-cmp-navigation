@@ -1,4 +1,4 @@
-package com.droidcon.recipes.presentation.component
+package com.droidcon.root.component
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
